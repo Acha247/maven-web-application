@@ -93,7 +93,7 @@
 	</dependencies>
 	<distributionManagement>
 	    <repository>
-	      <id>nexus</id>
+	      <id>nexus-releases</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
 	      <url>http://172.31.42.254:8081/repository/mavenreleases/</url>
 	    </repository>
