@@ -27,6 +27,9 @@
 		<sonar.password>becky</sonar.password> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		 <baseNexusURL>${baseNexusURL}</baseNexusURL>
+                 <targetRepositoryID>${repositoryId}</targetRepositoryID>
+                 <package.final.name>${project.artifactId}</package.final.name>
 	</properties>
 
 	<dependencies>
@@ -115,6 +118,14 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
 				<configuration>
+					<file>${file}</file>
+                            <groupId>${groupId}</groupId>
+                            <artifactId>${artifactId}</artifactId>
+                            <version>${version}</version>
+                            <packaging>${packaging}</packaging>
+                            <generatePom>true</generatePom>
+                            <repositoryId>${targetRepositoryID}</repositoryId>
+                            <url>${baseNexusURL}/content/repositories/${targetRepositoryID}</url>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
 				</configuration>
